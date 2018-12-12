@@ -1,22 +1,38 @@
-﻿namespace Log4Net.Async
+﻿using System.Threading;
+
+namespace Log4Net.Async
 {
     using log4net.Appender;
     using log4net.Core;
     using log4net.Util;
     using System;
-    using System.Runtime.Remoting.Messaging;
 
-    public abstract class AsyncForwardingAppenderBase : ForwardingAppender
+#if !NETSTANDARD
+   using System.Runtime.Remoting.Messaging;
+#else
+   internal static class CallContext
+   {
+      static System.Threading.AsyncLocal<object> _state;
+      
+      public static object HostContext
+      {
+         get => _state?.Value;
+         set => _state = new AsyncLocal<object> {Value = value};
+      }
+   }
+#endif
+
+   public abstract class AsyncForwardingAppenderBase : ForwardingAppender
     {
-        #region Private Members
+#region Private Members
 
         private const FixFlags DefaultFixFlags = FixFlags.Partial;
         private FixFlags fixFlags = DefaultFixFlags;
         private LoggingEventHelper loggingEventHelper;
 
-        #endregion Private Members
+#endregion Private Members
 
-        #region Properties
+#region Properties
 
         public FixFlags Fix
         {
@@ -46,7 +62,7 @@
 
         public abstract int BufferSize { get; set; }
 
-        #endregion Properties
+#endregion Properties
 
         public override void ActivateOptions()
         {
@@ -55,7 +71,7 @@
             InitializeAppenders();
         }
 
-        #region Appender Management
+#region Appender Management
 
         public override void AddAppender(IAppender newAppender)
         {
@@ -93,9 +109,9 @@
             }
         }
 
-        #endregion Appender Management
+#endregion Appender Management
 
-        #region Forwarding
+#region Forwarding
 
         protected void ForwardInternalError(string message, Exception exception, Type thisType)
         {
@@ -116,6 +132,6 @@
             }
         }
 
-        #endregion Forwarding
+#endregion Forwarding
     }
 }

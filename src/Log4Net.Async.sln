@@ -1,14 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{6D2497B1-6E3B-42CF-840B-D9D900B9453C}"
-	ProjectSection(SolutionItems) = preProject
-		paket.dependencies = paket.dependencies
-		paket.lock = paket.lock
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4Net.Async", "Log4Net.Async\Log4Net.Async.csproj", "{D4D0C360-E967-46E2-A43F-131F9C002B09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log4Net.Async", "Log4Net.Async\Log4Net.Async.csproj", "{D4D0C360-E967-46E2-A43F-131F9C002B09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4Net.Async.Tests", "Log4Net.Async.Tests\Log4Net.Async.Tests.csproj", "{A4C43C9A-2B71-4186-BAB5-DE294E5A05BA}"
 EndProject
@@ -44,5 +38,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D4D0C360-E967-46E2-A43F-131F9C002B09} = {EAFB6668-7DDC-469A-96AD-7DBE3DCF0304}
 		{A4C43C9A-2B71-4186-BAB5-DE294E5A05BA} = {4D497103-B378-433C-B340-8012E72FD3EF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {328CAA60-1F57-4B25-8CFF-453AF4F3E2DA}
 	EndGlobalSection
 EndGlobal

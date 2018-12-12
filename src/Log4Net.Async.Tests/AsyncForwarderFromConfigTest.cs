@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Reflection;
 using log4net;
 using log4net.Config;
 using NUnit.Framework;
@@ -12,8 +13,8 @@ namespace Log4Net.Async.Tests
         public void BufferSizeIsCorrectlyApplied()
         {
             // Arrange
-            XmlConfigurator.Configure();
-            var log = LogManager.GetLogger("TestLogger");
+            XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetExecutingAssembly()));
+            var log = LogManager.GetLogger(typeof(AsyncForwarderFromConfigTest));
             
             // Act
             var appenders = log.Logger.Repository.GetAppenders();
