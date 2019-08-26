@@ -1,20 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<Version>2.0.8</Version>
-  </PropertyGroup>
-  <PropertyGroup>
-    <RootNamespace>Log4Net.Async</RootNamespace>
-    <PackageId>Log4Net.Async.SignedB</PackageId>
-    <SignAssembly>true</SignAssembly>    
-    <AssemblyOriginatorKeyFile>..\..\..\eberzosagh.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <NoWarn>CS1591</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <NoWarn>CS1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.8" />

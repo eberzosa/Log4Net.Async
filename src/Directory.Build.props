@@ -1,0 +1,32 @@
+<Project>
+
+  <!-- Settings -->
+  <PropertyGroup>
+    <VersionPrefix>2.0.8</VersionPrefix>
+  </PropertyGroup>
+
+  <!-- Project Settings -->
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)..\..\eberzosagh.snk</AssemblyOriginatorKeyFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+
+  <!-- Packing -->
+  <PropertyGroup>
+    <Authors>Enrique Berzosa</Authors>
+    <Copyright>© 2014 Chris Haines, $([System.DateTime]::Now.Year) Enrique Berzosa</Copyright>
+    <RepositoryUrl>https://github.com/eberzosa/Log4Net.Async</RepositoryUrl>
+    <PackageTags>log loggin async log4net signed</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <!-- CI Helpers -->
+  <PropertyGroup>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)..\..\..\packages</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>

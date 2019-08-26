@@ -1,10 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.136
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log4Net.Async", "Log4Net.Async\Log4Net.Async.csproj", "{D4D0C360-E967-46E2-A43F-131F9C002B09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4Net.Async.Tests", "Log4Net.Async.Tests\Log4Net.Async.Tests.csproj", "{A4C43C9A-2B71-4186-BAB5-DE294E5A05BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log4Net.Async.Tests", "Log4Net.Async.Tests\Log4Net.Async.Tests.csproj", "{A4C43C9A-2B71-4186-BAB5-DE294E5A05BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{EAFB6668-7DDC-469A-96AD-7DBE3DCF0304}"
 EndProject
@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{A7C3
 		SampleConfig\AsyncAdoAppender.config = SampleConfig\AsyncAdoAppender.config
 		SampleConfig\AsyncForwardingAppender.config = SampleConfig\AsyncForwardingAppender.config
 		SampleConfig\AsyncRollingFileAppender.config = SampleConfig\AsyncRollingFileAppender.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28ABDCA2-CD25-410F-BE9B-E22B2CB2E7EF}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
 	EndProjectSection
 EndProject
 Global
